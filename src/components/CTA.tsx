@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Shield, TrendingUp, Clock } from "lucide-react";
-import WaitlistModal from "./WaitlistModal";
 
 const CTA = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -115,11 +114,6 @@ const CTA = () => {
           </p>
         </div>
       </div>
-
-      <WaitlistModal 
-        isOpen={isWaitlistOpen} 
-        onClose={() => setIsWaitlistOpen(false)} 
-      />
     </section>
   );
 };
