@@ -108,13 +108,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name *
                     </label>
-                    <Input placeholder="John" />
+                    <Input required placeholder="John" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name *
                     </label>
-                    <Input placeholder="Doe" />
+                    <Input required placeholder="Doe" />
                   </div>
                 </div>
                 
@@ -122,7 +122,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address *
                   </label>
-                  <Input type="email" placeholder="john@company.com" />
+                  <Input required type="email" placeholder="john@company.com" />
                 </div>
                 
                 <div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Phone Number
                   </label>
-                  <Input placeholder="+233 XX XXXX XXX" />
+                  <Input required  placeholder="+233 XX XXXX XXX" />
                 </div>
                 
                 <div>
@@ -175,26 +175,7 @@ const Contact = () => {
               </div>
 
               {/* Map */}
-              <Card className="p-6">
-                <CardHeader className="p-0 mb-4">
-                  <CardTitle>Our Location</CardTitle>
-                  <CardDescription>Find us in Accra, Ghana</CardDescription>
-                </CardHeader>
-                <div 
-                  ref={mapContainer} 
-                  className="w-full h-64 bg-muted rounded-lg flex items-center justify-center"
-                >
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-2" />
-                    <p className="text-muted-foreground">
-                      Interactive map will be displayed here
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Accra, Ghana
-                    </p>
-                  </div>
-                </div>
-              </Card>
+           
             </div>
           </div>
 

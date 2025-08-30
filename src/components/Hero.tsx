@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import aiAssistantImage from "@/assets/ai-assistant-hero.png"; 
 import AuthModal from "./AuthModal";
-import WaitlistModal from "./WaitlistModal";
 
 const Hero = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -65,15 +64,7 @@ const Hero = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button
-                variant="outline_hero"
-                size="lg"
-                className="group poppins font-semibold"
-                onClick={() => setIsWaitlistModalOpen(true)}
-              >
-                <Play className="mr-2 h-4 w-4" />
-                Join Waitlist
-              </Button>
+            
             </div>
           </div>
           {/* Right side */}
@@ -96,10 +87,7 @@ const Hero = () => {
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
       />
-      <WaitlistModal
-        isOpen={isWaitlistModalOpen}
-        onClose={() => setIsWaitlistModalOpen(false)}
-      />
+   
     </section>
   );
 };

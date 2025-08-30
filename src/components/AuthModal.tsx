@@ -19,9 +19,6 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-center space-x-2 text-2xl">
-            <div className="p-2 bg-gradient-primary rounded-lg">
-              <Brain className="w-6 h-6 text-primary-foreground" />
-            </div>
             <span>XYZ AI</span>
           </DialogTitle>
         </DialogHeader>

@@ -12,13 +12,14 @@ const Header = () => {
   return (
     <header className="w-full py-6 px-4 border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-3">
+        <a href="/">
+           <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-lg bg-black flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">X</span>
           </div>
           <h1 className="text-2xl font-bold text-foreground">XYZ AI</h1>
         </div>
-        
+        </a>
         <nav className="hidden md:flex items-center space-x-8">
           {location.pathname === "/" ? (
             <>

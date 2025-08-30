@@ -2,8 +2,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check, Zap, Crown, Rocket } from "lucide-react";
+import { useState } from "react";
+import AuthModal from "@/components/AuthModal" ;
 
 const Pricing = () => {
+    const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const plans = [
     {
       name: "Starter",
@@ -118,6 +121,7 @@ const Pricing = () => {
                   className="w-full" 
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
+                   onClick={() => setIsAuthModalOpen(true)}
                 >
                   {plan.buttonText}
                 </Button>
@@ -139,6 +143,10 @@ const Pricing = () => {
         </div>
       </main>
 
+              <AuthModal
+              isOpen={isAuthModalOpen}
+              onClose={() => setIsAuthModalOpen(false)}
+            />
       <Footer />
     </div>
   );
