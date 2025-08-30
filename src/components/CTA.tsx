@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Shield, TrendingUp, Clock } from "lucide-react";
+import AuthModal from "./AuthModal";
 
 const CTA = () => {
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const benefits = [
     {
@@ -69,7 +70,7 @@ const CTA = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary-dark text-primary-foreground shadow-feature group"
-                  onClick={() => setIsWaitlistOpen(true)}
+                  onClick={() => setIsAuthModalOpen(true)}
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -114,6 +115,10 @@ const CTA = () => {
           </p>
         </div>
       </div>
+            <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+      />
     </section>
   );
 };
